@@ -16,13 +16,42 @@ export default function Home() {
         <p style={{ maxWidth: '600px', fontSize: '1.1rem', marginBottom: '2rem' }}>Real-life examples of how SmartMatePro assists your business, 24/7.</p>
         <div style={{ display: 'flex', gap: '1.5rem', overflowX: 'auto' }}>
           {[
-            { question: "Hi, can I reschedule my appointment for tomorrow?", answer: "Sure! I’ve moved your appointment to tomorrow at 3 PM." },
-            { question: "Do you have any availability this weekend?", answer: "Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?" },
-            { question: "What are your business hours today?", answer: "We’re open until 6 PM. Would you like to schedule a visit?" }
-          ].map((item, i) => (
-            <div key={i} style={{ minWidth: '280px', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)', textAlign: 'left' }}>
-              <p><strong>🧑 Customer:</strong><br />{item.question}</p>
-              <p><strong>🤖 SmartMatePro:</strong><br />{item.answer}</p>
+            {
+              name: 'Emma',
+              avatar: '/avatars/emma.png',
+              question: "Hi, can I reschedule my appointment for tomorrow?",
+              businessAvatar: '/avatars/beauty.png',
+              businessName: 'Beauty Studio',
+              answer: "Sure! I’ve moved your appointment to tomorrow at 3 PM."
+            },
+            {
+              name: 'James',
+              avatar: '/avatars/james.png',
+              question: "Do you have any availability this weekend?",
+              businessAvatar: '/avatars/auto.png',
+              businessName: 'AutoCare Center',
+              answer: "Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?"
+            },
+            {
+              name: 'Linda',
+              avatar: '/avatars/linda.png',
+              question: "What are your business hours today?",
+              businessAvatar: '/avatars/cafe.png',
+              businessName: 'FreshBite Café',
+              answer: "We’re open until 6 PM. Would you like to schedule a visit?"
+            }
+          ].map((chat, index) => (
+            <div key={index} style={{ minWidth: '280px', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)', textAlign: 'left' }}>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <img src={chat.avatar} alt={chat.name} style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+                <strong>{chat.name}:</strong>
+              </div>
+              <p style={{ marginBottom: '1rem' }}>{chat.question}</p>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <img src={chat.businessAvatar} alt={chat.businessName} style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+                <strong>Your Business Name:</strong>
+              </div>
+              <p>{chat.answer}</p>
             </div>
           ))}
         </div>
