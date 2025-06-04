@@ -14,7 +14,17 @@ export default function Home() {
       <section style={{ padding: '3rem 2rem', background: '#f9fafc' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700, textAlign: 'center', marginBottom: '1rem' }}>How SmartMatePro Works</h2>
         <p style={{ maxWidth: '600px', fontSize: '1.1rem', margin: '0 auto 2rem', textAlign: 'center' }}>Real-life examples of how SmartMatePro assists your business, 24/7.</p>
-        <div style={{ display: 'flex', overflowX: 'auto', scrollSnapType: 'x mandatory', gap: '1.5rem', paddingBottom: '1rem' }}>
+        <div style={{
+          display: 'flex',
+          overflowX: 'auto',
+          scrollSnapType: 'x mandatory',
+          gap: '1.5rem',
+          paddingBottom: '1rem',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          paddingLeft: '1rem',
+          paddingRight: '1rem'
+        }}>
           {[
             {
               name: 'Emma',
@@ -22,7 +32,7 @@ export default function Home() {
               question: "Hi, can I reschedule my appointment for tomorrow?",
               businessAvatar: '/avatars/smartmatepro.png',
               businessName: 'SmartMatePro',
-              answer: "Sure! I’ve moved your appointment to tomorrow at 3 PM."
+              answer: "Yes, of course. What time works best for you?"
             },
             {
               name: 'James',
