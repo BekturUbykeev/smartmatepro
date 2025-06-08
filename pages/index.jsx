@@ -68,18 +68,75 @@ export default function Home() {
           alignItems: 'center'
         }}>
           <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
-            <p><strong>Emma:</strong> Hi, can I reschedule my appointment for tomorrow?</p>
-            <p><strong>SmartMatePro:</strong> Absolutely! What time's good for you?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/emma.png" alt="Emma" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>Emma:</strong>
+            </div>
+            <p>Hi, can I reschedule my appointment for tomorrow?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>Absolutely! What time's good for you?</p>
           </div>
           <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
-            <p><strong>James:</strong> Do you have any availability this weekend?</p>
-            <p><strong>SmartMatePro:</strong> Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/james.png" alt="James" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>James:</strong>
+            </div>
+            <p>Do you have any availability this weekend?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?</p>
           </div>
           <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
-            <p><strong>Linda:</strong> What are your business hours today?</p>
-            <p><strong>SmartMatePro:</strong> We’re open until 6 PM. Would you like to schedule a visit?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/linda.png" alt="Linda" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>Linda:</strong>
+            </div>
+            <p>What are your business hours today?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>We’re open until 6 PM. Would you like to schedule a visit?</p>
           </div>
         </div>
+      </motion.section>
+
+      {/* Why SmartMatePro section */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        style={{
+          padding: '3rem 1.5rem',
+          background: '#ffffff',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700 }}>Why SmartMatePro?</h2>
+        <ul style={{ listStyle: 'none', padding: 0, fontSize: '1rem', margin: '1.5rem 0' }}>
+          {[
+            "24/7 AI assistant for voice and text",
+            "Learns and improves with every conversation",
+            "Built-in calendar for seamless bookings",
+            "Adapts to your brand’s tone and style",
+            "Setup in minutes — no coding required"
+          ].map((item, i) => (
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', marginBottom: '0.75rem' }}>
+              <span style={{ fontSize: '1.25rem', color: '#007aff' }}>●</span> {item}
+            </li>
+          ))}
+        </ul>
       </motion.section>
 
       {/* Final CTA section */}
