@@ -3,16 +3,14 @@ import React from 'react';
 export default function Home() {
   return (
     <main style={{ fontFamily: 'Inter, sans-serif', margin: 0, backgroundColor: '#fff' }}>
-      
+
       {/* Hero section */}
       <section style={{
-        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
         background: 'linear-gradient(145deg, #f0f4ff, #e6f0ff)',
-        padding: '3rem 2rem',
+        padding: '4rem 2rem',
         textAlign: 'center'
       }}>
         <h1 style={{
@@ -22,52 +20,54 @@ export default function Home() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>SmartMatePro</h1>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>Smarter communication starts here</h2>
-        <p style={{ maxWidth: '600px', fontSize: '1.1rem' }}>AI-powered assistant that talks and texts like your best team member.</p>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>AI that speaks your brand.</h2>
+        <p style={{ maxWidth: '600px', fontSize: '1.1rem' }}>SmartMatePro adapts to your voice, your clients, your business.</p>
       </section>
 
       {/* Demo Chat Carousel */}
       <section style={{
         padding: '3rem 2rem',
-        background: '#f9fafc'
+        background: '#f9fafc',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
       }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700, textAlign: 'center', marginBottom: '1rem' }}>How SmartMatePro Works</h2>
-        <p style={{ maxWidth: '600px', fontSize: '1.1rem', margin: '0 auto 2rem', textAlign: 'center' }}>
-          Real-life examples of how SmartMatePro assists your business, 24/7.
-        </p>
+        <p style={{ maxWidth: '600px', fontSize: '1.1rem', margin: '0 auto 2rem', textAlign: 'center' }}>Real-life examples of how SmartMatePro assists your business, 24/7.</p>
         <div style={{
           display: 'flex',
           overflowX: 'auto',
           scrollSnapType: 'x mandatory',
           gap: '1.5rem',
-          paddingBottom: '1rem'
+          paddingBottom: '1rem',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          paddingLeft: '1rem',
+          paddingRight: '1rem'
         }}>
-          {[
-            {
-              name: 'Emma',
-              avatar: '/avatars/emma.png',
-              question: "Hi, can I reschedule my appointment for tomorrow?",
-              businessAvatar: '/avatars/smartmatepro.png',
-              businessName: 'SmartMatePro',
-              answer: "Sure! I’ve moved your appointment to tomorrow at 3 PM."
-            },
-            {
-              name: 'James',
-              avatar: '/avatars/james.png',
-              question: "Do you have any availability this weekend?",
-              businessAvatar: '/avatars/smartmatepro.png',
-              businessName: 'SmartMatePro',
-              answer: "Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?"
-            },
-            {
-              name: 'Linda',
-              avatar: '/avatars/linda.png',
-              question: "What are your business hours today?",
-              businessAvatar: '/avatars/smartmatepro.png',
-              businessName: 'SmartMatePro',
-              answer: "We’re open until 6 PM. Would you like to schedule a visit?"
-            }
-          ].map((chat, index) => (
+          {[{
+            name: 'Emma',
+            avatar: '/avatars/emma.png',
+            question: "Hi, can I reschedule my appointment for tomorrow?",
+            businessAvatar: '/avatars/smartmatepro.png',
+            businessName: 'SmartMatePro',
+            answer: "Absolutely! What time's good for you?"
+          }, {
+            name: 'James',
+            avatar: '/avatars/james.png',
+            question: "Do you have any availability this weekend?",
+            businessAvatar: '/avatars/smartmatepro.png',
+            businessName: 'SmartMatePro',
+            answer: "Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?"
+          }, {
+            name: 'Linda',
+            avatar: '/avatars/linda.png',
+            question: "What are your business hours today?",
+            businessAvatar: '/avatars/smartmatepro.png',
+            businessName: 'SmartMatePro',
+            answer: "We’re open until 6 PM. Would you like to schedule a visit?"
+          }].map((chat, index) => (
             <div key={index} style={{
               flex: '0 0 320px',
               scrollSnapAlign: 'start',
@@ -100,43 +100,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why SmartMatePro Section */}
+      {/* Why Section */}
       <section style={{
         padding: '3rem 2rem',
         background: '#ffffff',
-        textAlign: 'center'
+        textAlign: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
       }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Why SmartMatePro?</h2>
         <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.1rem', margin: '1rem 0' }}>
-          {[
-            "24/7 AI-powered communication",
-            "Voice and text assistant in one platform",
-            "Integrated calendar booking",
-            "Customizable tone and responses",
-            "Fast, no-code setup"
-          ].map((item, i) => (
-            <li key={i}>✔ {item}</li>
+          {["24/7 AI assistant for voice and text", "Learns and improves with every conversation", "Built-in calendar for seamless bookings", "Adapts to your brand’s tone and style", "Setup in minutes — no coding required"].map((item, i) => (
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+              <span style={{ fontSize: '1.25rem', color: '#007aff' }}>●</span> {item}
+            </li>
           ))}
         </ul>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
           {['WhatsApp', 'Instagram', 'Telegram', 'Messenger', 'Gmail'].map((platform, i) => (
-            <span key={i} style={{
-              backgroundColor: '#f1f3f5',
-              padding: '0.5rem 1rem',
-              borderRadius: '999px'
-            }}>{platform}</span>
+            <span key={i} style={{ backgroundColor: '#f1f3f5', padding: '0.5rem 1rem', borderRadius: '999px' }}>{platform}</span>
           ))}
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* CTA */}
       <section style={{
         padding: '3rem 2rem',
         background: 'linear-gradient(135deg, #f4f7fc, #e8f0fe)',
-        textAlign: 'center'
+        textAlign: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Try SmartMatePro</h2>
-        <p style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '1rem' }}>Let your business speak smarter</p>
+        <p style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '1.5rem' }}>Let your business speak smarter</p>
         <button style={{
           padding: '1rem 2rem',
           backgroundColor: '#111827',
@@ -145,7 +146,9 @@ export default function Home() {
           fontWeight: 600,
           border: 'none',
           borderRadius: '12px',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          width: 'fit-content',
+          minWidth: '180px'
         }}>
           Get Started
         </button>
