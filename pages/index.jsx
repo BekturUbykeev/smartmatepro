@@ -1,158 +1,122 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main style={{ fontFamily: 'Inter, sans-serif', margin: 0, backgroundColor: '#fff' }}>
 
       {/* Hero section */}
-      <section style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        background: 'linear-gradient(145deg, #f0f4ff, #e6f0ff)',
-        padding: '4rem 2rem',
-        textAlign: 'center'
-      }}>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '4rem 1.5rem',
+          background: 'linear-gradient(180deg, #eef3fb 0%, #dceeff 100%)',
+          textAlign: 'center'
+        }}
+      >
         <h1 style={{
-          fontSize: '3rem',
+          fontSize: '2.5rem',
           fontWeight: 'bold',
           background: 'linear-gradient(to right, #007aff, #00c6ff)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>SmartMatePro</h1>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>AI that speaks your brand.</h2>
-        <p style={{ maxWidth: '600px', fontSize: '1.1rem' }}>SmartMatePro adapts to your voice, your clients, your business.</p>
-      </section>
+        <h2 style={{
+          fontSize: '1.5rem',
+          fontWeight: 700,
+          marginBottom: '1rem',
+          color: '#111827'
+        }}>AI that speaks your brand.</h2>
+        <p style={{ maxWidth: '640px', fontSize: '1rem', color: '#333' }}>
+          SmartMatePro adapts to your voice, your clients, your business.
+        </p>
+      </motion.section>
 
-      {/* Demo Chat Carousel */}
-      <section style={{
-        padding: '3rem 2rem',
-        background: '#f9fafc',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, textAlign: 'center', marginBottom: '1rem' }}>How SmartMatePro Works</h2>
-        <p style={{ maxWidth: '600px', fontSize: '1.1rem', margin: '0 auto 2rem', textAlign: 'center' }}>Real-life examples of how SmartMatePro assists your business, 24/7.</p>
+      {/* How It Works section */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        style={{
+          padding: '3rem 1.5rem',
+          background: '#f9fafc',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1rem' }}>How SmartMatePro Works</h2>
+        <p style={{ maxWidth: '600px', fontSize: '1rem', marginBottom: '2rem' }}>
+          Real-life examples of how SmartMatePro assists your business, 24/7.
+        </p>
         <div style={{
           display: 'flex',
-          overflowX: 'auto',
-          scrollSnapType: 'x mandatory',
+          flexDirection: 'column',
           gap: '1.5rem',
-          paddingBottom: '1rem',
-          maxWidth: '1200px',
-          margin: '0 auto',
-          paddingLeft: '1rem',
-          paddingRight: '1rem'
+          width: '100%',
+          alignItems: 'center'
         }}>
-          {[{
-            name: 'Emma',
-            avatar: '/avatars/emma.png',
-            question: "Hi, can I reschedule my appointment for tomorrow?",
-            businessAvatar: '/avatars/smartmatepro.png',
-            businessName: 'SmartMatePro',
-            answer: "Absolutely! What time's good for you?"
-          }, {
-            name: 'James',
-            avatar: '/avatars/james.png',
-            question: "Do you have any availability this weekend?",
-            businessAvatar: '/avatars/smartmatepro.png',
-            businessName: 'SmartMatePro',
-            answer: "Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?"
-          }, {
-            name: 'Linda',
-            avatar: '/avatars/linda.png',
-            question: "What are your business hours today?",
-            businessAvatar: '/avatars/smartmatepro.png',
-            businessName: 'SmartMatePro',
-            answer: "We’re open until 6 PM. Would you like to schedule a visit?"
-          }].map((chat, index) => (
-            <div key={index} style={{
-              flex: '0 0 320px',
-              scrollSnapAlign: 'start',
-              padding: '1.5rem',
-              background: '#fff',
-              borderRadius: '12px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
-              textAlign: 'left',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
-                  <img src={chat.avatar} alt={chat.name} style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
-                  <strong>{chat.name}:</strong>
-                </div>
-                <p style={{ marginBottom: '1rem' }}>{chat.question}</p>
-              </div>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
-                  <img src={chat.businessAvatar} alt={chat.businessName} style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
-                  <strong>{chat.businessName}:</strong>
-                </div>
-                <p>{chat.answer}</p>
-              </div>
-            </div>
-          ))}
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <p><strong>Emma:</strong> Hi, can I reschedule my appointment for tomorrow?</p>
+            <p><strong>SmartMatePro:</strong> Absolutely! What time's good for you?</p>
+          </div>
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <p><strong>James:</strong> Do you have any availability this weekend?</p>
+            <p><strong>SmartMatePro:</strong> Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?</p>
+          </div>
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <p><strong>Linda:</strong> What are your business hours today?</p>
+            <p><strong>SmartMatePro:</strong> We’re open until 6 PM. Would you like to schedule a visit?</p>
+          </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Why Section */}
-      <section style={{
-        padding: '3rem 2rem',
-        background: '#ffffff',
-        textAlign: 'center',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Why SmartMatePro?</h2>
-        <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.1rem', margin: '1rem 0' }}>
-          {["24/7 AI assistant for voice and text", "Learns and improves with every conversation", "Built-in calendar for seamless bookings", "Adapts to your brand’s tone and style", "Setup in minutes — no coding required"].map((item, i) => (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-              <span style={{ fontSize: '1.25rem', color: '#007aff' }}>●</span> {item}
-            </li>
-          ))}
-        </ul>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
-          {['WhatsApp', 'Instagram', 'Telegram', 'Messenger', 'Gmail'].map((platform, i) => (
-            <span key={i} style={{ backgroundColor: '#f1f3f5', padding: '0.5rem 1rem', borderRadius: '999px' }}>{platform}</span>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{
-        padding: '3rem 2rem',
-        background: 'linear-gradient(135deg, #f4f7fc, #e8f0fe)',
-        textAlign: 'center',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Try SmartMatePro</h2>
-        <p style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '1.5rem' }}>Let your business speak smarter</p>
+      {/* Final CTA section */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        style={{
+          padding: '3rem 1.5rem',
+          background: 'linear-gradient(135deg, #f4f7fc, #e8f0fe)',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700 }}>Try SmartMatePro</h2>
+        <p style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '1.5rem' }}>Let your business speak smarter</p>
         <button style={{
           padding: '1rem 2rem',
           backgroundColor: '#111827',
           color: 'white',
-          fontSize: '1.1rem',
+          fontSize: '1rem',
           fontWeight: 600,
           border: 'none',
           borderRadius: '12px',
           cursor: 'pointer',
           width: 'fit-content',
-          minWidth: '180px'
+          minWidth: '160px'
         }}>
           Get Started
         </button>
-      </section>
+      </motion.section>
+
     </main>
   );
 }
