@@ -67,8 +67,42 @@ export default function Home() {
           width: '100%',
           alignItems: 'center'
         }}>
-          {/* Chat cards here... */}
-          {/* ...same as original cards with avatars... */}
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/emma.png" alt="Emma" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>Emma:</strong>
+            </div>
+            <p>Hi, can I reschedule my appointment for tomorrow?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>Absolutely! What time's good for you?</p>
+          </div>
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/james.png" alt="James" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>James:</strong>
+            </div>
+            <p>Do you have any availability this weekend?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?</p>
+          </div>
+          <div style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+              <img src="/avatars/linda.png" alt="Linda" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>Linda:</strong>
+            </div>
+            <p>What are your business hours today?</p>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+              <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+              <strong>SmartMatePro:</strong>
+            </div>
+            <p>We’re open until 6 PM. Would you like to schedule a visit?</p>
+          </div>
         </div>
       </motion.section>
 
