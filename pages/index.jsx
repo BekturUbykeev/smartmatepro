@@ -67,36 +67,32 @@ export default function Home() {
           width: '100%',
           alignItems: 'center'
         }}>
-          {/* ...Cards (Emma, James, Linda) stay unchanged... */}
+          {/* Chat cards here... */}
+          {/* ...same as original cards with avatars... */}
         </div>
       </motion.section>
 
-      {/* Why SmartMatePro updated section (no image, full code) */}
+      {/* Why SmartMatePro full-screen title section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         style={{
-          padding: '4rem 1.5rem',
-          background: 'linear-gradient(180deg, #ffffff 0%, #f2fcff 100%)',
           minHeight: '100vh',
           display: 'flex',
-          flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          textAlign: 'center'
+          background: 'linear-gradient(to bottom, #ffffff, #f0fcff)',
+          textAlign: 'center',
+          padding: '2rem'
         }}
       >
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '2rem', color: '#111827' }}>Why SmartMatePro</h2>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, maxWidth: '640px', fontSize: '1rem', color: '#333' }}>
-          {["AI-powered assistant for modern businesses", "Built to match your brand’s tone", "Handles chats and calls 24/7", "Integrates with your favorite tools", "Set up in minutes, no tech skills needed"].map((item, i) => (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-              <span style={{ fontSize: '1.25rem', color: '#00c6ff' }}>✓</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        <h2 style={{
+          fontSize: '2.5rem',
+          fontWeight: 800,
+          color: '#111827'
+        }}>Why <span style={{ fontWeight: 900 }}>SmartMatePro</span></h2>
       </motion.section>
 
       {/* Final CTA section */}
