@@ -27,30 +27,32 @@ export default function Home() {
           background: 'linear-gradient(to right, #007aff, #00c6ff)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
-        }}>SmartMatePro</h1>
+        }}>
+          SmartMatePro
+        </h1>
 
         <h2 style={{
           fontSize: '1.5rem',
           fontWeight: 700,
           marginBottom: '1rem',
           color: '#111827'
-        }}>AI that speaks your brand.</h2>
+        }}>
+          AI that speaks your brand.
+        </h2>
 
         <p style={{
           fontSize: '1.1rem',
           fontWeight: 400,
           color: '#444',
-          lineHeight: '1.8',
+          lineHeight: '1.6',
           textAlign: 'center',
           marginTop: '1.5rem',
           maxWidth: '600px',
           marginLeft: 'auto',
-          marginRight: 'auto',
+          marginRight: 'auto'
         }}>
-          Built to <strong>sound like you</strong>.<br />
-          Trained to <strong>serve like you</strong>.<br />
-          <strong>Always learning</strong>.<br />
-          <strong>Always on</strong>.
+          Built to sound like you. Trained to serve like you.<br />
+          Always learning. Always on.
         </p>
       </motion.section>
 
@@ -71,10 +73,13 @@ export default function Home() {
           textAlign: 'center'
         }}
       >
-        <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1rem' }}>How SmartMatePro Works</h2>
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1rem' }}>
+          How SmartMatePro Works
+        </h2>
         <p style={{ maxWidth: '600px', fontSize: '1rem', marginBottom: '2rem' }}>
           Real-life examples of how SmartMatePro assists your business, 24/7.
         </p>
+
         <div style={{
           display: 'flex',
           flexDirection: 'column',
@@ -103,13 +108,11 @@ export default function Home() {
                 <strong>{name.charAt(0).toUpperCase() + name.slice(1)}:</strong>
               </div>
               <p>
-                {
-                  name === 'emma'
-                    ? 'Hi, can I reschedule my appointment for tomorrow?'
-                    : name === 'james'
+                {name === 'emma'
+                  ? 'Hi, can I reschedule my appointment for tomorrow?'
+                  : name === 'james'
                     ? 'Do you have any availability this weekend?'
-                    : 'What are your business hours today?'
-                }
+                    : 'What are your business hours today?'}
               </p>
               <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
                 <img
@@ -120,20 +123,18 @@ export default function Home() {
                 <strong>SmartMatePro:</strong>
               </div>
               <p>
-                {
-                  name === 'emma'
-                    ? "Absolutely! What time's good for you?"
-                    : name === 'james'
+                {name === 'emma'
+                  ? "Absolutely! What time's good for you?"
+                  : name === 'james'
                     ? 'Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?'
-                    : 'We’re open until 6 PM. Would you like to schedule a visit?'
-                }
+                    : 'We’re open until 6 PM. Would you like to schedule a visit?'}
               </p>
             </div>
           ))}
         </div>
       </motion.section>
 
-      {/* Why SmartMatePro? */}
+      {/* Why SmartMatePro */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +145,7 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'linear-gradient(to bottom, #ffffff, #f0fcff)',
+          background: 'linear-gradient(180deg, #eef3fb 0%, #dceeff 100%)',
           textAlign: 'center',
           padding: '2rem'
         }}
@@ -213,7 +214,9 @@ export default function Home() {
         }}
       >
         <h2 style={{ fontSize: '1.75rem', fontWeight: 700 }}>Try SmartMatePro</h2>
-        <p style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '1.5rem' }}>Let your business speak smarter</p>
+        <p style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '1.5rem' }}>
+          Let your business speak smarter
+        </p>
         <button style={{
           padding: '1rem 2rem',
           backgroundColor: '#111827',
