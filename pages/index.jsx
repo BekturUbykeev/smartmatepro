@@ -28,14 +28,29 @@ export default function Home() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>SmartMatePro</h1>
+
         <h2 style={{
           fontSize: '1.5rem',
           fontWeight: 700,
           marginBottom: '1rem',
           color: '#111827'
         }}>AI that speaks your brand.</h2>
-        <p style={{ maxWidth: '640px', fontSize: '1rem', color: '#333' }}>
-          SmartMatePro adapts to your voice, your clients, your business.
+
+        <p style={{
+          fontSize: '1.1rem',
+          fontWeight: 400,
+          color: '#444',
+          lineHeight: '1.8',
+          textAlign: 'center',
+          marginTop: '1.5rem',
+          maxWidth: '600px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}>
+          Built to <strong>sound like you</strong>.<br />
+          Trained to <strong>serve like you</strong>.<br />
+          <strong>Always learning</strong>.<br />
+          <strong>Always on</strong>.
         </p>
       </motion.section>
 
@@ -171,7 +186,7 @@ export default function Home() {
           <img
             src={`/icons/${item.icon}.png`}
             alt={item.title}
-            style={{ width: '150px', height: '150px', marginBottom: '1rem' }}
+            style={{ width: '200px', height: '200px', marginBottom: '1rem' }}
           />
           <div>
             <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>{item.title}</h2>
