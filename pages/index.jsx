@@ -68,25 +68,51 @@ export default function Home() {
           alignItems: 'center'
         }}>
           {['emma', 'james', 'linda'].map((name, idx) => (
-            <div key={idx} style={{ maxWidth: '360px', width: '90%', padding: '1.5rem', background: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>
+            <div
+              key={idx}
+              style={{
+                maxWidth: '360px',
+                width: '90%',
+                padding: '1.5rem',
+                background: '#fff',
+                borderRadius: '12px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
+              }}
+            >
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
-                <img src={`/avatars/${name}.png`} alt={name} style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+                <img
+                  src={`/avatars/${name}.png`}
+                  alt={name}
+                  style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }}
+                />
                 <strong>{name.charAt(0).toUpperCase() + name.slice(1)}:</strong>
               </div>
-              <p>{
-                name === 'emma' ? 'Hi, can I reschedule my appointment for tomorrow?' :
-                name === 'james' ? 'Do you have any availability this weekend?' :
-                'What are your business hours today?'
-              }</p>
+              <p>
+                {
+                  name === 'emma'
+                    ? 'Hi, can I reschedule my appointment for tomorrow?'
+                    : name === 'james'
+                    ? 'Do you have any availability this weekend?'
+                    : 'What are your business hours today?'
+                }
+              </p>
               <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
-                <img src="/avatars/smartmatepro.png" alt="SmartMatePro" style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }} />
+                <img
+                  src="/avatars/smartmatepro.png"
+                  alt="SmartMatePro"
+                  style={{ width: '32px', height: '32px', borderRadius: '999px', marginRight: '0.5rem' }}
+                />
                 <strong>SmartMatePro:</strong>
               </div>
-              <p>{
-                name === 'emma' ? "Absolutely! What time's good for you?" :
-                name === 'james' ? 'Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?' :
-                'We’re open until 6 PM. Would you like to schedule a visit?'
-              }</p>
+              <p>
+                {
+                  name === 'emma'
+                    ? "Absolutely! What time's good for you?"
+                    : name === 'james'
+                    ? 'Yes, we have slots this Saturday: 10 AM and 1 PM. Which one works for you?'
+                    : 'We’re open until 6 PM. Would you like to schedule a visit?'
+                }
+              </p>
             </div>
           ))}
         </div>
@@ -113,60 +139,46 @@ export default function Home() {
         </h2>
       </motion.section>
 
-      {/* 24/7 AI Assistant */}
-      <motion.section style={fullPageSectionStyle}>
-        <img src="/icons/clock.png" alt="24/7 AI Assistant" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
-        <div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>24/7 AI Assistant</h2>
-          <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
-            Always available to respond to both spoken questions and text messages
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Learns and Improves */}
-      <motion.section style={fullPageSectionStyle}>
-        <img src="/icons/brain.png" alt="Learns and Improves" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
-        <div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Learns and Improves</h2>
-          <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
-            Continuously gets better with every interaction
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Built-in Smart Scheduler */}
-      <motion.section style={fullPageSectionStyle}>
-        <img src="/icons/calendar.png" alt="Built-in Smart Scheduler" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
-        <div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Built-in Smart Scheduler</h2>
-          <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
-            Beyond booking — SmartMatePro schedules, reminds, reschedules, and adapts — all in real-time, across platforms.
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Supports Multiple Languages */}
-      <motion.section style={fullPageSectionStyle}>
-        <img src="/icons/language.png" alt="Supports Multiple Languages" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
-        <div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Supports Multiple Languages</h2>
-          <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
-            From English to Spanish, French to Japanese — SmartMatePro communicates with your clients in their native language.
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Smart Analytics & Insights */}
-      <motion.section style={fullPageSectionStyle}>
-        <img src="/icons/analytic.png" alt="Smart Analytics & Insights" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
-        <div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Smart Analytics & Insights</h2>
-          <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
-            SmartMatePro turns every interaction into valuable insight. See what clients ask, when they ask, and how to serve them better — effortlessly.
-          </p>
-        </div>
-      </motion.section>
+      {/* Feature Blocks */}
+      {[
+        {
+          icon: 'clock',
+          title: '24/7 AI Assistant',
+          desc: 'Always available to respond to both spoken questions and text messages'
+        },
+        {
+          icon: 'brain',
+          title: 'Learns and Improves',
+          desc: 'Continuously gets better with every interaction'
+        },
+        {
+          icon: 'calendar',
+          title: 'Built-in Smart Scheduler',
+          desc: 'Beyond booking — SmartMatePro schedules, reminds, reschedules, and adapts — all in real-time, across platforms.'
+        },
+        {
+          icon: 'language',
+          title: 'Supports Multiple Languages',
+          desc: 'From English to Spanish, French to Japanese — SmartMatePro communicates with your clients in their native language.'
+        },
+        {
+          icon: 'analytic',
+          title: 'Smart Analytics & Insights',
+          desc: 'SmartMatePro turns every interaction into valuable insight. See what clients ask, when they ask, and how to serve them better — effortlessly.'
+        }
+      ].map((item, index) => (
+        <motion.section key={index} style={fullPageSectionStyle}>
+          <img
+            src={`/icons/${item.icon}.png`}
+            alt={item.title}
+            style={{ width: '150px', height: '150px', marginBottom: '1rem' }}
+          />
+          <div>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>{item.title}</h2>
+            <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>{item.desc}</p>
+          </div>
+        </motion.section>
+      ))}
 
       {/* Final CTA */}
       <motion.section
