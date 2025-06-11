@@ -94,28 +94,36 @@ const sections = [
           textAlign: 'center'
         }}
       >
-        <h1 style={{
-          fontSize: '2.5rem',
-          fontWeight: 'bold',
-          background: 'linear-gradient(to right, #007aff, #00c6ff)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent'
-        }}>SmartMatePro</h1>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', color: '#111827' }}>
+        <h1
+          style={{
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            background: 'linear-gradient(to right, #007aff, #00c6ff)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}
+        >
+          SmartMatePro
+        </h1>
+        <h2
+          style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', color: '#111827' }}
+        >
           AI that speaks your brand.
         </h2>
-        <p style={{
-          fontSize: '1.1rem',
-          fontWeight: 400,
-          color: '#444',
-          lineHeight: '1.6',
-          maxWidth: '520px',
-          marginTop: '1rem',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          whiteSpace: 'pre-line'
-        }}>
-          Built to sound like you. Trained to serve like you.\nAlways learning. Always on.
+        <p
+          style={{
+            fontSize: '1.1rem',
+            fontWeight: 400,
+            color: '#444',
+            lineHeight: '1.6',
+            maxWidth: '520px',
+            marginTop: '1rem',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}
+        >
+          Built to sound like you. Trained to serve like you.<br />
+          Always learning. Always on.
         </p>
         <button
           onClick={() => window.fullpage_api.moveTo('examples')}
@@ -137,7 +145,6 @@ const sections = [
       </motion.div>
     )
   },
-  // ... (rest of the sections stay the same)
   ...features.map((item, index) => ({
     key: `feature-${index}`,
     anchor: `feature-${index}`,
@@ -183,7 +190,7 @@ export default function Home() {
       bigSectionsDestination={'top'}
       render={() => (
         <ReactFullpage.Wrapper>
-          {sections.map(section => (
+          {sections.map((section) => (
             <div className="section" key={section.key}>
               {section.content}
             </div>
