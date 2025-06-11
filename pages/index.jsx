@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* 24/7 AI Assistant */}
       <motion.section style={fullPageSectionStyle}>
-        <img src="/features/clock-icon.png" alt="24/7 AI Assistant" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
+        <img src="/icons/clock.png" alt="24/7 AI Assistant" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
         <div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>24/7 AI Assistant</h2>
           <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* Learns and Improves */}
       <motion.section style={fullPageSectionStyle}>
-        <img src="/features/learns-icon.png" alt="Learns and Improves" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
+        <img src="/icons/brain.png" alt="Learns and Improves" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
         <div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Learns and Improves</h2>
           <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* Built-in Smart Scheduler */}
       <motion.section style={fullPageSectionStyle}>
-        <img src="/features/scheduler-icon.png" alt="Built-in Smart Scheduler" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
+        <img src="/icons/calendar.png" alt="Built-in Smart Scheduler" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
         <div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Built-in Smart Scheduler</h2>
           <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* Supports Multiple Languages */}
       <motion.section style={fullPageSectionStyle}>
-        <img src="/features/multilang-icon.png" alt="Supports Multiple Languages" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
+        <img src="/icons/language.png" alt="Supports Multiple Languages" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
         <div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Supports Multiple Languages</h2>
           <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
@@ -159,7 +159,7 @@ export default function Home() {
 
       {/* Smart Analytics & Insights */}
       <motion.section style={fullPageSectionStyle}>
-        <img src="/features/analytics-icon.png" alt="Smart Analytics & Insights" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
+        <img src="/icons/analytic.png" alt="Smart Analytics & Insights" style={{ width: '120px', height: '120px', marginBottom: '1rem' }} />
         <div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Smart Analytics & Insights</h2>
           <p style={{ fontSize: '1.1rem', maxWidth: '480px', margin: '0 auto' }}>
