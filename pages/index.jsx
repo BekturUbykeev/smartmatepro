@@ -122,8 +122,7 @@ const sections = [
             marginRight: 'auto'
           }}
         >
-          Built to sound like you. Trained to serve like you.<br />
-          Always learning. Always on.
+          Built to sound like you<br />Trained to serve like you<br />Always learning, always on
         </p>
         <button
           onClick={() => window.fullpage_api.moveTo('examples')}
@@ -176,6 +175,47 @@ const sections = [
       </motion.div>
     )
   }))
+,
+  {
+    key: 'cta',
+    anchor: 'cta',
+    content: (
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{
+          padding: '3rem 1.5rem',
+          background: 'linear-gradient(135deg, #f4f7fc, #e8f0fe)',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700 }}>Try SmartMatePro</h2>
+        <p style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '1.5rem' }}>
+          Let your business speak smarter
+        </p>
+        <button style={{
+          padding: '1rem 2rem',
+          backgroundColor: '#111827',
+          color: 'white',
+          fontSize: '1rem',
+          fontWeight: 600,
+          border: 'none',
+          borderRadius: '12px',
+          cursor: 'pointer',
+          width: 'fit-content',
+          minWidth: '160px'
+        }}>
+          Get Started
+        </button>
+      </motion.div>
+    )
+  }
 ];
 
 export default function Home() {
